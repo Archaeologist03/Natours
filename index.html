@@ -32,3 +32,94 @@
         
     </body>
 </html>
+
+
+
+
+
+
+<nav class="clearfix">
+    <ul class="navigation">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Pricing`</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="buttons">
+    <a href="#" class="btn-main">Sign up</a>
+    <a href="#" class="btn-hot">Get a quote</a>
+</div>
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  $color-primary: #f9ed69; // yellow
+  $color-secondary: #f89a5d; // orange
+  $color-tertiary: #b83b53; // pink
+  $color-text-dark: darkgray;
+  
+  $width-button: 150px;
+  
+  nav {
+    margin: 30px;
+    background-color: $color-primary;
+    
+    &::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+  }
+  
+  
+  .navigation {
+    list-style: none;
+    float: left;
+    
+    li {
+      display: inline-block;
+      margin-left: 30px;
+      
+      &:first-child {
+      margin: 0;
+      }
+      
+      a:link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-text-dark;
+      }
+    }
+  }
+  
+  .buttons {
+    float: right;
+    
+  }
+  
+  .btn-main:link,
+  .btn-hot:link {
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: $width-button;
+  }
+  
+  .btn-main {
+    &:link {
+      background-color: $color-secondary;
+    }
+    &:hover {
+      background-color: darken($color-secondary, 15%);
+    }
+  }
